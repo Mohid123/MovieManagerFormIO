@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { FormioAuthService } from '@formio/angular/auth';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'moviemanager';
+  constructor(
+    public auth: FormioAuthService,
+    private router: Router
+  ) {
+    this.auth.onLogin.subscribe(() => {
+      this.router.navigate(['/']);
+    });
+
+    this.auth.onLogout.subscribe(() => {
+      this.router.navigate(['/auth/login']);
+    });
+
+    this.auth.onRegister.subscribe(() => {
+      this.router.navigate(['/']);
+    });
+  }
 }
