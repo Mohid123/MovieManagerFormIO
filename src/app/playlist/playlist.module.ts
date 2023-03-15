@@ -25,8 +25,7 @@ movieRoutes[2].children.push({
     FormioResourceService,
     {provide: FormioResourceConfig, useValue: {
       name: 'playlist',
-      form: 'playlist',
-      view: './playlist.html'
+      form: 'playlist'
     }}
   ]
 })

@@ -31,4 +31,7 @@
   <h3 class="text-center">WELCOME!</h3>
   <h5 *ngIf="auth?.user?.data?.email" class="text-center pb-5">You are logged in as:  <span class="text-primary">{{auth?.user?.data?.email}}</span></h5>
   <router-outlet></router-outlet>
+  <ng-container *ngIf="checkUrl(currentUrl)">
+    <button (click)="gotoMovies()" class="btn-dark px-2 py-1 rounded-sm">See Movie list</button>
+  </ng-container>
 </div>

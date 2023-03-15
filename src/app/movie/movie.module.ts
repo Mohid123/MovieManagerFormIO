@@ -25,7 +25,8 @@ import {
         'playlist',
         {
           field: 'title',
-          resource: 'Playlist'
+          resource: 'Playlist',
+          filter: true
         }
       ]
     }}
