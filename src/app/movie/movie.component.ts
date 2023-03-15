@@ -13,7 +13,7 @@ import { FormioResourceViewComponent } from '@formio/angular/resource';
         <br>
         <span>Watch Now:&nbsp; <a class="text-primary font-weight-bold" [href]="service?.resource?.data?.youtubeUrlForVideo" target="_blank">{{service?.resource?.data?.youtubeUrlForVideo}}</a></span>
         <br>
-        <img width="600" height="400" [src]="'https://img.youtube.com/vi/'+service?.resource?.data?.youtubeId+'/0.jpg'" [alt]="service?.resource?.data?.title" loading="lazy">
+        <img width="600" height="450" [src]="'https://img.youtube.com/vi/'+service?.resource?.data?.youtubeId+'/0.jpg'" [alt]="service?.resource?.data?.title" loading="lazy">
       </div>
     </div>
   </div>
