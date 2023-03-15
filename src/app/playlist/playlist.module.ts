@@ -7,15 +7,18 @@ import {
   FormioResourceConfig,
   FormioResourceService
 } from '@formio/angular/resource';
+import { PlayListComponent } from './playlist.component';
 
-const movieRoutes: Routes = FormioResourceRoutes();
+const movieRoutes: Routes = FormioResourceRoutes({
+  resource: PlayListComponent
+});
 movieRoutes[2].children.push({
   path: 'movies',
   loadChildren: () => import('../movie/movie.module').then(m => m.MovieModule)
 });
 
 @NgModule({
-  declarations: [],
+  declarations: [PlayListComponent],
   imports: [
     CommonModule,
     FormioResource,

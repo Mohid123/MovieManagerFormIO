@@ -7,6 +7,8 @@ import {
   FormioResourceConfig,
   FormioResourceService
 } from '@formio/angular/resource';
+import { MovieComponent } from './movie.component';
+
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import {
   imports: [
     CommonModule,
     FormioResource,
-    RouterModule.forChild(FormioResourceRoutes())
+    RouterModule.forChild(FormioResourceRoutes({
+      view: MovieComponent
+    }))
   ],
   providers: [
     FormioResourceService,
